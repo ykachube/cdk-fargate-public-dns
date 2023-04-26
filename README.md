@@ -1,4 +1,7 @@
-# @raykrueger/cdk-fargate-public-dns
+# @ykachube/cdk-fargate-public-dns
+
+based on @raykrueger/cdk-fargate-public-dns
+
 
 This is an [AWS Cloud Development Kit](https://aws.amazon.com/cdk/) V2 construct
 library to support updating Route 53 entry with the public ip address of an ECS
@@ -13,7 +16,7 @@ CDK stack. Within the `dnsConfig` block you pass the Route 53 fully qualified
 domain name, and the hosted zone ID.
 
 ```javascript
-import { PublicIPSupport } from '@raykrueger/cdk-fargate-public-dns';
+import { PublicIPSupport } from '@ykachube/cdk-fargate-public-dns';
 
 new PublicIPSupport(stack, 'PublicIPSupport', {
     cluster,
@@ -70,8 +73,3 @@ rule is defined to look for the `lastStatus` and `desiredStatus` attributes to
 be 'RUNNING' of an `ECS Task State Change` event. It is also specifically tied
 to the Service and Cluster passed into the constructor.
 
-## I was here
-
-Note that I built this in my free time. This has nothing to do with my employer.
-
-Enjoy! -Ray
